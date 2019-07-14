@@ -31,7 +31,7 @@ class ApplicationController < ActionController::Base
       value: JSON.generate(new_cart),
       expires: 10.days.from_now
     }
+    
     cookies[:cart]
   end
-
 end
