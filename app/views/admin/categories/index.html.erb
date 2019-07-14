@@ -1,0 +1,20 @@
+<section class="admin-categories-index">
+  <header class="header">
+    <h1>Admin &raquo; All categories</h1>
+  </header>
+  <div class="link">
+    <%= link_to '+ New Category', [:new, :admin, :category], class: 'info' %>
+  </div>
+  <div class="default-categories">
+    <table class="big-borded-table">
+      <thead>
+        <tr>
+          <th colspan="2">Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @categories %>
+      </tbody>
+    </table>
+  </div>
+</section>
