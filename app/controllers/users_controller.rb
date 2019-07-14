@@ -9,7 +9,7 @@ class UsersController < ApplicationController
         session[:user_id] = @user.id
         redirect_to user_path, notice: "New user created!"
       else
-        render "new"
+        redirect_to "/"
       end
     end
  
