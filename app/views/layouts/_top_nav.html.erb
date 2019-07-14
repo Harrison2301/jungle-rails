@@ -55,9 +55,18 @@
         <% end %>
         <% end %>
         </li>
-        <li>
-          <%= link_to cart_path do %>
-            <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
+        <% if current_user %>
+            <li>
+              <%= link_to cart_path do %>
+              <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
+            </li>
+          <% end %>
+          <% else %>
+            <li>
+              <%= link_to new_session_path do %>
+              <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
+            </li>
+          <% end %>
           <% end %>
         </li>
       </ul>
