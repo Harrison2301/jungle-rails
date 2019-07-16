@@ -8,6 +8,12 @@ class Admin::ProductsController < ApplicationController
     @product = Product.new
   end
 
+
+  def show
+    @reviews = @product.reviews
+    @review = Review.new
+  end
+
   def create
     @product = Product.new(product_params)
 
