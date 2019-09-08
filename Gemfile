@@ -64,3 +64,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   #initialize rspec for testing
 end
+
+group :test do
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
+end
